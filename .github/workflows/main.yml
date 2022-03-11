@@ -27,7 +27,7 @@ jobs:
       - name: run tests
         id: tests
         run: | 
-          docker compose logs app
+          docker compose logs app --follow
           docker compose run app pytest
           
       - name: Dump docker logs on failure
