@@ -30,7 +30,7 @@ jobs:
         
       - name: Dump docker logs on failure
         if: failure()
-        run: docker compose logs --follow app
+        run: docker compose logs app
 
         
         
