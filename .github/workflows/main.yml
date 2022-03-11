@@ -25,7 +25,7 @@ jobs:
         run: docker compose build
         
       - name: run tests
-        run: docker compose exec app python -m pytest
+        run: docker compose run app python -m pytest
         
       
 
