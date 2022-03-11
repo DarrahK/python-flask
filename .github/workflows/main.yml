@@ -27,11 +27,13 @@ jobs:
       - name: run tests
         id: tests
         run: | 
-          docker compose run app pytest
+          docker compose run app pytest > errors.txt
           
       - name: output python version
         if: failure()
-        run: echo ${{ steps.tests.outputs.stdout }}
+        run: |
+          type errors.txt
+          exit 1
 
 
 
