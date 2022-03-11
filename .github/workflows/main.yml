@@ -26,10 +26,8 @@ jobs:
         
       - name: run tests
         id: tests
-        run: |
-          docker compose run app pytest
-          docker compose logs --follow app
-        continue-on-error: true
+        run: docker compose run app pytest
+
         
         
       
