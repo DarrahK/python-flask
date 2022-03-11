@@ -25,10 +25,14 @@ jobs:
         run: docker compose build
         
       - name: run tests
+        id: tests
         run: docker compose run app pytest
+        continue-on-error: true
         
       - name: errors
+        if: steps.tests.outcome != 'success'
         run: docker-compose logs
+        
         
       
 
