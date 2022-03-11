@@ -28,14 +28,7 @@ jobs:
         id: tests
         run: | 
           docker compose run app pytest > last_test.log
-          
-          
-      - name: Dump docker logs on failure
-        if: failure()
-        run: |
-          cat last_test.log
-          rm last_test.log
-          exit 1
+
 
         
         
