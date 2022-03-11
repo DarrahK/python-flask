@@ -30,7 +30,7 @@ jobs:
         
       - name: Dump docker logs on failure
         if: failure()
-        uses: jwalton/gh-docker-logs@v1
+        run: docker compose logs --follow app
 
         
         
