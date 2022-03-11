@@ -27,7 +27,7 @@ jobs:
       - name: run tests
         id: tests
         run: | 
-          docker compose run app pytest > last_test.log
+          docker compose run app pytest
           
       - name: output python version
         if: failure()
