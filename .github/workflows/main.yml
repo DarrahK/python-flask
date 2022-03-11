@@ -27,6 +27,10 @@ jobs:
       - name: run tests
         id: tests
         run: docker compose run app pytest
+        
+      - name: Dump docker logs on failure
+        if: failure()
+        uses: jwalton/gh-docker-logs@v1
 
         
         
