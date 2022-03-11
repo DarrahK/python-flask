@@ -31,7 +31,7 @@ jobs:
         
       - name: errors
         if: steps.tests.outcome != 'success'
-        run: docker-compose logs
+        run: docker compose logs --follow app
         
         
       
