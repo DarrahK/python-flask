@@ -32,7 +32,7 @@ jobs:
       - name: output python version
         if: failure()
         run: |
-          type errors.txt
+          cat errors.txt
           exit 1
 
 
