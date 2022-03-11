@@ -27,6 +27,9 @@ jobs:
       - name: run tests
         run: docker compose run -a stdout app pytest
         
+      - name: errors
+        run: docker-compose logs | grep error
+        
       
 
 
