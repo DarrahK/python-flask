@@ -24,9 +24,6 @@ jobs:
       - name: docker build
         run: docker compose build
         
-      - name: docker up
-        run: docker compose up
-        
       - name: run tests
         run: docker compose exec api python -m pytest
         
