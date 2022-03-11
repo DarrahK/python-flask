@@ -33,7 +33,6 @@ jobs:
         if: failure()
         run: |
           cat errors.txt
-          exit 1
 
 
 
