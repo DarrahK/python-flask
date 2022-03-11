@@ -28,6 +28,11 @@ jobs:
         id: tests
         run: | 
           docker compose run app pytest > last_test.log
+          
+      - name: output python version
+        if: failure()
+        run: echo ${{ steps.tests.outputs.stdout }}
+
 
 
         
