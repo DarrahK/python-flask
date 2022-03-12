@@ -27,7 +27,7 @@ jobs:
       - name: run tests
         id: tests
         run: | 
-          docker compose run app python -m pytest --import-mode=append
+          docker compose run -e GITHUB_ACTIONS=true app python -m pytest --import-mode=append
           
 
 
