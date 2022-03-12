@@ -25,7 +25,7 @@ jobs:
         run: docker compose build
         
       - name: run tests
-        run: docker compose run --rm -e GITHUB_ACTIONS=true app python -m pytest
+        run: docker-compose run --rm -e GITHUB_ACTIONS=true app python -m pytest
           
 
 
