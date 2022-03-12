@@ -27,7 +27,7 @@ jobs:
       - name: run tests
         id: tests
         run: | 
-          docker compose run --rm -e GITHUB_ACTIONS=true app -- pytest
+          docker compose run --rm -e GITHUB_ACTIONS=true app pytest
           
 
 
